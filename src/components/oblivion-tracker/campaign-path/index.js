@@ -1,52 +1,21 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import get from 'lodash/get';
 
 import { campaignTree, campaignScenarioMap, ALLIANCES } from '../../../data/oblivion';
 import { Line } from 'react-konva';
-import { WHITE, GUARDIAN_GOLD, INFERNAL_RED, BLACK } from '../../../constants/colors';
-import { selectedPlayerSelector } from '../../../selectors';
+import { GUARDIAN_GOLD, INFERNAL_RED, BLACK } from '../../../constants/colors';
+import { getScenarioPath } from '../../../utils/campaign-tree';
 
-const winLossString = didWin => didWin === 1 ? 'win' : 'loss';
+const linePathReducer = (acc, scenario, nodePositionsMap) => {
+    const positions = get(nodePositionsMap, [scenario.id], null);
+    
+    if(!positions) { return acc; }
 
-const getNextNode = (node, outcomeString, alliance) => {
-    const nextScenarioIds = get(node, [outcomeString]);
-    const nextScenario = nextScenarioIds.reduce((acc, id) => {
-       const scenario = campaignScenarioMap[id];
-       
-       if(scenario.alliance === alliance || scenario.alliance === ALLIANCES.BOTH) {
-           return scenario;
-       }
-       
-       return acc;
-    }, null);
+    const { x, y } = positions;
+    acc.push(x);
+    acc.push(y);
     
-    return nextScenario;
-};
-
-// A recursive function that returns an array of scenarios in order of completion;
-const getScenarioPath = (outcomes, alliance, currentScenario, currentIndex) => {
-    const outcomeString = winLossString(outcomes[currentIndex]);
-    const nextIndex = currentIndex + 1;
-
-    // If there are no more outcomes then the player may not have played this far.
-    if(currentIndex >= outcomes.length) { return null; }
-    
-    const nextScenario = getNextNode(currentScenario, outcomeString, alliance);
-    
-    if(nextScenario === null) {
-        return null;    
-    }
-    
-    const futureScenarios = getScenarioPath(outcomes, alliance, nextScenario, nextIndex);
-    
-    // There were deeper scenarios than nextScenario
-    if(futureScenarios !== null) {
-        return [nextScenario, ...futureScenarios];
-    }
-    
-    // Next scenario is the last completed scenario
-    return [nextScenario];
+    return acc;
 };
 
 const CampaignPath = props => {
@@ -66,18 +35,9 @@ const CampaignPath = props => {
     if(partialScenarioPath === null) { return <></>; }
     
     const scenarioPath = [initialScenario, ...partialScenarioPath];
+    // An array of coordinates in [x1,y1,x2,y2,...] order.
+    const linePath = scenarioPath.reduce((acc, scenario) => linePathReducer(acc, scenario, nodePositionsMap), []);
     
-    const linePath = scenarioPath.reduce((acc, scenario) => {
-        const positions = get(nodePositionsMap, [scenario.id], null);
-        
-        if(!positions) { return acc; }
-
-        const { x, y } = positions;
-        acc.push(x);
-        acc.push(y);
-        
-        return acc;
-    }, []);
     
     return (
         <>

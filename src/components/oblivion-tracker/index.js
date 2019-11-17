@@ -8,6 +8,7 @@ import CampaignTreeBackground from './campaign-tree-background';
 import PrologueTier from './campaign-layers/prologue-tier';
 import VLayer from './campaign-layers/v-layer';
 import CampaignPath from './campaign-path';
+import CampaignOutcomes from './campaign-outcomes';
 import { selectedPlayerSelector, playerListSelector } from '../../selectors';
 
 const aspectRatio = 1.223;
@@ -61,6 +62,7 @@ const OblivionTracker = props => {
             <Layer>
                 <PrologueTier nodes={prologueNodes} x={width/2} y={0} radius={nodeRadius} dispatch={dispatch} />
                 {tier2Through5.map((nodes, i) => <VLayer key={`tier_${i}`} nodes={nodes} x={width/2} y={tierHeight * (i + 1)} radius={nodeRadius} width={width} height={tierHeight} dispatch={dispatch} />)}
+                <CampaignOutcomes player={selectedPlayer} nodePositionsMap={nodePositions} radius={nodeRadius} />
             </Layer>
         </Stage> 
     );

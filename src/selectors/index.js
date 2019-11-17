@@ -11,3 +11,5 @@ export const selectedPlayerSelector = state => {
     
     return player;
 };
+
+export const nodePositionsSelector = state => state.nodeProperties.positions;
