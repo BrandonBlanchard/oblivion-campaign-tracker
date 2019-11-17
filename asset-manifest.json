@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/BrandonBlanchard/oblivion-campaign-tracker/static/css/main.720e3815.chunk.css",
-    "main.js": "/BrandonBlanchard/oblivion-campaign-tracker/static/js/main.b939cf07.chunk.js",
-    "main.js.map": "/BrandonBlanchard/oblivion-campaign-tracker/static/js/main.b939cf07.chunk.js.map",
-    "runtime-main.js": "/BrandonBlanchard/oblivion-campaign-tracker/static/js/runtime-main.ee307d26.js",
-    "runtime-main.js.map": "/BrandonBlanchard/oblivion-campaign-tracker/static/js/runtime-main.ee307d26.js.map",
-    "static/js/2.c70f0f2f.chunk.js": "/BrandonBlanchard/oblivion-campaign-tracker/static/js/2.c70f0f2f.chunk.js",
-    "static/js/2.c70f0f2f.chunk.js.map": "/BrandonBlanchard/oblivion-campaign-tracker/static/js/2.c70f0f2f.chunk.js.map",
-    "index.html": "/BrandonBlanchard/oblivion-campaign-tracker/index.html",
-    "precache-manifest.85e4a7615a596f42395f5ec7c8e9c143.js": "/BrandonBlanchard/oblivion-campaign-tracker/precache-manifest.85e4a7615a596f42395f5ec7c8e9c143.js",
-    "service-worker.js": "/BrandonBlanchard/oblivion-campaign-tracker/service-worker.js",
-    "static/css/main.720e3815.chunk.css.map": "/BrandonBlanchard/oblivion-campaign-tracker/static/css/main.720e3815.chunk.css.map"
+    "main.css": "/oblivion-campaign-tracker/static/css/main.a3d35bc9.chunk.css",
+    "main.js": "/oblivion-campaign-tracker/static/js/main.22fbfe97.chunk.js",
+    "main.js.map": "/oblivion-campaign-tracker/static/js/main.22fbfe97.chunk.js.map",
+    "runtime-main.js": "/oblivion-campaign-tracker/static/js/runtime-main.887b9a8a.js",
+    "runtime-main.js.map": "/oblivion-campaign-tracker/static/js/runtime-main.887b9a8a.js.map",
+    "static/js/2.c70f0f2f.chunk.js": "/oblivion-campaign-tracker/static/js/2.c70f0f2f.chunk.js",
+    "static/js/2.c70f0f2f.chunk.js.map": "/oblivion-campaign-tracker/static/js/2.c70f0f2f.chunk.js.map",
+    "index.html": "/oblivion-campaign-tracker/index.html",
+    "precache-manifest.5f906e00cda15756deb8033311041738.js": "/oblivion-campaign-tracker/precache-manifest.5f906e00cda15756deb8033311041738.js",
+    "service-worker.js": "/oblivion-campaign-tracker/service-worker.js",
+    "static/css/main.a3d35bc9.chunk.css.map": "/oblivion-campaign-tracker/static/css/main.a3d35bc9.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.ee307d26.js",
+    "static/js/runtime-main.887b9a8a.js",
     "static/js/2.c70f0f2f.chunk.js",
-    "static/css/main.720e3815.chunk.css",
-    "static/js/main.b939cf07.chunk.js"
+    "static/css/main.a3d35bc9.chunk.css",
+    "static/js/main.22fbfe97.chunk.js"
   ]
 }
