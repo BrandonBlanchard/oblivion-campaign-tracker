@@ -31,12 +31,14 @@ const VLayer = props => {
         height,
         dispatch
     } = props;
+
     const allNodes = sortBy(nodes, ['alliance', 'order']);
     const halfWidth = width/2;
     const guardianBottom = [x + -halfWidth, y + height/2];
     const corruptorBottom = [x + halfWidth, y + height/2];
+    const nodeRadius = nodes.length < 2 ? radius * 2 : radius;
 
-    return (allNodes.map((node, i, arr) => nodePlotter(corruptorBottom, guardianBottom, radius, node, dispatch, i, arr)));
+    return (allNodes.map((node, i, arr) => nodePlotter(corruptorBottom, guardianBottom, nodeRadius, node, dispatch, i, arr)));
 };
 
 export default VLayer;

@@ -29,7 +29,7 @@ const PlayerChooser = props => {
 
     return (
       <div className='player-selector'>
-        <Select options={options} onChange={changePlayerHandler} value={selectedOption} />
+        <Select options={options} onChange={changePlayerHandler} value={selectedOption} isSearchable={false} />
       </div>
     );
 };

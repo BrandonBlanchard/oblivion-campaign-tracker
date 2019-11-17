@@ -17,7 +17,7 @@ const calculateSize = (setWidth, setHeight, setNodeRadius, container) => {
         const w = container.current.clientWidth;
         setWidth(w);
         setHeight(w * aspectRatio);
-        setNodeRadius(w/25);
+        setNodeRadius(w/23);
     }
 };
 

@@ -25,12 +25,12 @@ const fetchPlayerData = async (url) => {
 const decodePlayer = line => {
     const splitLine = line.split(',');
     const [name, allianceString, omen] = splitLine.slice(0, 3);
-    const rawOutcomes = splitLine.slice(2, splitLine.length - 1);
+    const rawOutcomes = splitLine.slice(3);
+
     const outcomes = rawOutcomes.map( val => {
-        if(val === "0") { return 0; }
-        if(val === "1") { return 1; }
-        return null; 
-    }).filter(val => val !== null);
+        if(val === "" || val.length < 1) { return null; }
+        return parseFloat(val); 
+    }).filter(val => val > -1);
     
     return {
         name,

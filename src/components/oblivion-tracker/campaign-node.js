@@ -6,11 +6,13 @@ import { WHITE, BLACK } from '../../constants/colors';
 
 const TierDiamonds = (tier, centerX, centerY, diamondRadius) => {
     const diamondDiameter = diamondRadius * 2;
+    const diamondMargin = 2;
     const diamonds = [];
-    const origin = centerX - diamondDiameter * tier / 2 + diamondRadius; 
+    const tierDiamondsOffset = (diamondDiameter + diamondMargin) * (tier-1) / 2;
+    const origin = centerX - tierDiamondsOffset;
     
     for(let i = 0; i < tier; i += 1) {
-        const x = origin + i * (diamondDiameter + 2);
+        const x = origin + i * (diamondDiameter + diamondMargin);
         
         diamonds.push(
             <RegularPolygon key={`${x}-${centerY}`} x={x} y={centerY} radius={diamondRadius} sides={4} stroke={WHITE} fill={WHITE} strokeWidth={1}/>  
@@ -54,7 +56,7 @@ const CampaignNode = props => {
                 text={name}
                 align='center'
                 fill={WHITE}
-                fontSize={radius * 0.34}
+                fontSize={radius * 0.32}
                 fontFamily='Times New Roman' />
             { TierDiamonds(tier, 0, tierDiamondY, diamondRadius) }
         </ Group>
