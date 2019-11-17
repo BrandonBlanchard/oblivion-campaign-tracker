@@ -2,7 +2,7 @@
   "name": "oblivion",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/BrandonBlanchard/oblivion-campaign-tracker",
+  "homepage": "https://brandonblanchard.github.io/oblivion-campaign-tracker/",
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
