@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a4b5f9d1ffe2e77dbe7cb5c0ff4554c1",
+    "revision": "3f2909f25544b600a4fb1e7de33094fa",
     "url": "/oblivion-campaign-tracker/index.html"
   },
   {
-    "revision": "354708e1dd4ec67df971",
+    "revision": "3b7f0ffb0276f140c372",
     "url": "/oblivion-campaign-tracker/static/css/main.a3d35bc9.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/oblivion-campaign-tracker/static/js/2.c70f0f2f.chunk.js"
   },
   {
-    "revision": "354708e1dd4ec67df971",
-    "url": "/oblivion-campaign-tracker/static/js/main.22fbfe97.chunk.js"
+    "revision": "3b7f0ffb0276f140c372",
+    "url": "/oblivion-campaign-tracker/static/js/main.57e360b4.chunk.js"
   },
   {
     "revision": "3a833b66cf9444da5343",

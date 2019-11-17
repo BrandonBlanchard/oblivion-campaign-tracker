@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/oblivion-campaign-tracker/static/css/main.a3d35bc9.chunk.css",
-    "main.js": "/oblivion-campaign-tracker/static/js/main.22fbfe97.chunk.js",
-    "main.js.map": "/oblivion-campaign-tracker/static/js/main.22fbfe97.chunk.js.map",
+    "main.js": "/oblivion-campaign-tracker/static/js/main.57e360b4.chunk.js",
+    "main.js.map": "/oblivion-campaign-tracker/static/js/main.57e360b4.chunk.js.map",
     "runtime-main.js": "/oblivion-campaign-tracker/static/js/runtime-main.887b9a8a.js",
     "runtime-main.js.map": "/oblivion-campaign-tracker/static/js/runtime-main.887b9a8a.js.map",
     "static/js/2.c70f0f2f.chunk.js": "/oblivion-campaign-tracker/static/js/2.c70f0f2f.chunk.js",
     "static/js/2.c70f0f2f.chunk.js.map": "/oblivion-campaign-tracker/static/js/2.c70f0f2f.chunk.js.map",
     "index.html": "/oblivion-campaign-tracker/index.html",
-    "precache-manifest.5f906e00cda15756deb8033311041738.js": "/oblivion-campaign-tracker/precache-manifest.5f906e00cda15756deb8033311041738.js",
+    "precache-manifest.d4ca8bf60c2c15e6687f3ede036dc461.js": "/oblivion-campaign-tracker/precache-manifest.d4ca8bf60c2c15e6687f3ede036dc461.js",
     "service-worker.js": "/oblivion-campaign-tracker/service-worker.js",
     "static/css/main.a3d35bc9.chunk.css.map": "/oblivion-campaign-tracker/static/css/main.a3d35bc9.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.887b9a8a.js",
     "static/js/2.c70f0f2f.chunk.js",
     "static/css/main.a3d35bc9.chunk.css",
-    "static/js/main.22fbfe97.chunk.js"
+    "static/js/main.57e360b4.chunk.js"
   ]
 }
