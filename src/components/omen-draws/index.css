@@ -1,0 +1,13 @@
+.omen-draw {
+    border: 1px solid #fff;
+    color: #fff;
+    max-width: 130px;
+    padding: 4px 8px;
+    
+    display: flex;
+    font-size: 10px;
+}
+
+.omen-draw__label {
+    margin-right: 10px;
+}
