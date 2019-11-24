@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/oblivion-campaign-tracker/precache-manifest.7b0ca6b71f61bd1555f91a220ff012d7.js"
+  "/oblivion-campaign-tracker/precache-manifest.2d8a7d770910a23e54a7aff3ea5b14a3.js"
 );
 
 self.addEventListener('message', (event) => {

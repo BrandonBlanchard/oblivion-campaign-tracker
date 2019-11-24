@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a07192ff7f363ee6f128bb33e46482d",
+    "revision": "99476b1ec68f113aa9cf3942c13becad",
     "url": "/oblivion-campaign-tracker/index.html"
   },
   {
