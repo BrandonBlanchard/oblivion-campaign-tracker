@@ -29,6 +29,9 @@ const OblivionTracker = props => {
     } = props;
     const nodePositions = useSelector(state => state.nodeProperties.positions);
     const selectedPlayer = useSelector(selectedPlayerSelector);
+    const playersList = useSelector(playerListSelector);
+    
+    const showAll = playersList.length > 0 &&  !selectedPlayer;
     
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
@@ -57,7 +60,8 @@ const OblivionTracker = props => {
         <Stage width={width} height={height + BORDER_OFFSET * 2}>
             <CampaignTreeBackground width={width} height={height}/>
             <Layer>
-                { selectedPlayer && <CampaignPath player={selectedPlayer} nodePositionsMap={nodePositions} /> }
+                { selectedPlayer && <CampaignPath player={selectedPlayer} nodePositionsMap={nodePositions}/> }
+                { showAll && playersList.map(player => <CampaignPath key={player.name} player={player} nodePositionsMap={nodePositions} shouldFuzz />) }
             </Layer>
             <Layer>
                 <PrologueTier nodes={prologueNodes} x={width/2} y={0} radius={nodeRadius} dispatch={dispatch} />

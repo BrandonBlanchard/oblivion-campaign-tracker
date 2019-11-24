@@ -12,16 +12,24 @@ const linePathReducer = (acc, scenario, nodePositionsMap) => {
     if(!positions) { return acc; }
 
     const { x, y } = positions;
+    
     acc.push(x);
     acc.push(y);
     
     return acc;
 };
 
+const fuzzValue = value => {
+    const mod = Math.random() * 30 - 15;
+    
+    return mod + value;
+};
+
 const CampaignPath = props => {
     const { 
         nodePositionsMap,
-        player
+        player,
+        shouldFuzz = false
     } = props;
     const {
         alliance,
@@ -37,12 +45,13 @@ const CampaignPath = props => {
     const scenarioPath = [initialScenario, ...partialScenarioPath];
     // An array of coordinates in [x1,y1,x2,y2,...] order.
     const linePath = scenarioPath.reduce((acc, scenario) => linePathReducer(acc, scenario, nodePositionsMap), []);
-    
+    const fuzzyPath = linePath.map(value => fuzzValue(value));
+    const path = shouldFuzz ? fuzzyPath : linePath;
     
     return (
         <>
-            <Line points={linePath} stroke={BLACK} strokeWidth={8} />
-            <Line points={linePath} stroke={pathColor} strokeWidth={2} />
+            <Line points={path} stroke={BLACK} strokeWidth={8} />
+            <Line points={path} stroke={pathColor} strokeWidth={2} />
         </>
     );
 };

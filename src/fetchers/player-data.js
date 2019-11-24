@@ -47,6 +47,6 @@ export const getPlayerData = () => new Promise(async (resolve, reject) => {
     
     const lines = playerData.split('\n').slice(1);
     const players = lines.map(decodePlayer);
-    console.log(players);
+
     resolve(players);
 });
